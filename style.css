@@ -1,81 +1,116 @@
-/* Phong cách tối giản trên nền trắng */
+/* Thiết kế phẳng (Flat Design) - Không đổ bóng, không nền màu */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 body {
-    background-color: #ffffff; /* Bỏ nền màu, chỉ dùng trắng */
-    color: #111;
-    line-height: 1.8;
+    background-color: #ffffff; /* Nền trắng hoàn toàn */
+    color: #333;
+    line-height: 1.6;
+    padding: 40px 0;
 }
 
 .container {
-    max-width: 800px; /* Thu hẹp độ rộng để dễ đọc văn bản */
-    margin: 50px auto;
+    max-width: 900px;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
-.job-section {
-    margin-bottom: 60px;
+.main-header {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.main-title {
-    font-size: 2.2rem;
-    color: #000;
-    text-align: center;
-    margin-bottom: 5px;
+.main-header h1 {
+    font-size: 2rem;
+    color: #2c3e50;
     letter-spacing: 1px;
 }
 
-.subtitle {
-    text-align: center;
-    color: #666;
-    font-size: 1.1rem;
-    margin-bottom: 30px;
+.line {
+    height: 3px;
+    width: 80px;
+    background: #3498db;
+    margin: 10px auto;
 }
 
-.image-simple {
+.job-item {
+    margin-bottom: 40px;
+}
+
+.job-name {
+    color: #2980b9;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.person-name {
+    color: #7f8c8d;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.job-body {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.job-image {
+    flex: 1;
+}
+
+.job-image img {
     width: 100%;
-    margin-bottom: 35px;
+    display: block;
+    border: 1px solid #eee; /* Viền mỏng thay cho đổ bóng */
 }
 
-.image-simple img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd; /* Đường kẻ nhẹ ngăn cách ảnh */
+.job-info {
+    flex: 1.5;
 }
 
-h3 {
-    font-size: 1.4rem;
-    color: #222;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    border-left: 4px solid #333; /* Điểm nhấn nhỏ bên trái */
-    padding-left: 15px;
-}
-
-ul {
-    list-style-position: inside;
+.info-group {
     margin-bottom: 20px;
 }
 
+.info-group h3 {
+    font-size: 1.1rem;
+    color: #e67e22; /* Màu cam nhấn cho tiêu đề mục */
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+}
+
 ul li {
-    margin-bottom: 10px;
-    list-style-type: square;
+    margin-bottom: 8px;
+    padding-left: 15px;
+    position: relative;
 }
 
-.section-divider {
+ul li::before {
+    content: "•";
+    color: #3498db;
+    position: absolute;
+    left: 0;
+}
+
+.separator {
     height: 1px;
-    background: #eaeaea;
-    margin: 80px 0;
+    background: #eee;
+    margin: 40px 0;
 }
 
-/* Tương thích điện thoại */
-@media (max-width: 600px) {
-    .main-title {
-        font-size: 1.8rem;
+/* Di động */
+@media (max-width: 768px) {
+    .job-body {
+        flex-direction: column;
     }
 }
