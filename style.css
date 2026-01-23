@@ -1,39 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, sans-serif;
+}
 
-/* style.css */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 40px 60px;
-    line-height: 1.7;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
 }
 
-h1 {
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 60px 20px;
     text-align: center;
-    color: #1f4ed8;
-    font-size: 28px;
 }
 
-ol.main-list {
-    list-style-type: upper-alpha;
-    color: red;
+.header-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: -40px auto 40px;
+    padding: 0 20px;
+}
+
+.job-detail {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-bottom: 60px;
+}
+
+.job-hero {
+    position: relative;
+    height: 350px;
+}
+
+.job-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.job-title-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+}
+
+.job-title-overlay h2 {
+    font-size: 2.5rem;
+}
+
+.job-content {
+    padding: 40px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.info-item h3 {
+    color: #e67e22; /* Màu nhấn cho Hàng không */
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.blue-theme .job-title-overlay {
+    background: linear-gradient(transparent, rgba(44, 62, 80, 0.9));
+}
+
+.blue-theme + .job-content .info-item h3 {
+    color: #3498db; /* Màu nhấn cho Điện */
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+ul li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: inherit;
     font-weight: bold;
-    font-size: 18px;
 }
 
-ol.main-list > li {
-    margin-top: 20px;
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #7f8c8d;
 }
 
-ul.circle {
-    list-style-type: circle;
-    color: black;
-    font-weight: normal;
-    font-size: 16px;
-    margin-left: 40px;
-}
-
-.sub-text {
-    color: black;
-    font-weight: normal;
-    font-size: 16px;
-    margin-left: 40px;
+/* Di động */
+@media (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    .job-hero {
+        height: 250px;
+    }
 }
