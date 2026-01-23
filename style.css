@@ -1,13 +1,13 @@
-/* Thiết kế phẳng (Flat Design) - Không đổ bóng, không nền màu */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #ffffff; /* Nền trắng hoàn toàn */
+    background-color: #ffffff;
     color: #333;
     line-height: 1.6;
     padding: 40px 0;
@@ -25,14 +25,14 @@ body {
 }
 
 .main-header h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #2c3e50;
     letter-spacing: 1px;
 }
 
 .line {
-    height: 3px;
-    width: 80px;
+    height: 4px;
+    width: 70px;
     background: #3498db;
     margin: 10px auto;
 }
@@ -50,7 +50,7 @@ body {
 .person-name {
     color: #7f8c8d;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-style: italic;
 }
 
@@ -67,7 +67,8 @@ body {
 .job-image img {
     width: 100%;
     display: block;
-    border: 1px solid #eee; /* Viền mỏng thay cho đổ bóng */
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
 .job-info {
@@ -75,14 +76,15 @@ body {
 }
 
 .info-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .info-group h3 {
     font-size: 1.1rem;
-    color: #e67e22; /* Màu cam nhấn cho tiêu đề mục */
-    margin-bottom: 8px;
-    text-transform: uppercase;
+    color: #e67e22;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
 }
 
 ul {
@@ -91,7 +93,7 @@ ul {
 
 ul li {
     margin-bottom: 8px;
-    padding-left: 15px;
+    padding-left: 20px;
     position: relative;
 }
 
@@ -100,15 +102,15 @@ ul li::before {
     color: #3498db;
     position: absolute;
     left: 0;
+    font-weight: bold;
 }
 
 .separator {
     height: 1px;
     background: #eee;
-    margin: 40px 0;
+    margin: 50px 0;
 }
 
-/* Di động */
 @media (max-width: 768px) {
     .job-body {
         flex-direction: column;
