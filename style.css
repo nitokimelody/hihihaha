@@ -1,123 +1,81 @@
+/* Phong cách tối giản trên nền trắng */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', -apple-system, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
-    background-color: #f8f9fa;
-    color: #333;
-    line-height: 1.6;
-}
-
-header {
-    background: #2c3e50;
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.header-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    background-color: #ffffff; /* Bỏ nền màu, chỉ dùng trắng */
+    color: #111;
+    line-height: 1.8;
 }
 
 .container {
-    max-width: 1100px;
-    margin: -40px auto 40px;
+    max-width: 800px; /* Thu hẹp độ rộng để dễ đọc văn bản */
+    margin: 50px auto;
     padding: 0 20px;
 }
 
-.job-detail {
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+.job-section {
     margin-bottom: 60px;
 }
 
-.job-hero {
-    position: relative;
-    height: 350px;
+.main-title {
+    font-size: 2.2rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
 }
 
-.job-hero img {
+.subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.image-simple {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    margin-bottom: 35px;
 }
 
-.job-title-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 40px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.8));
-    color: white;
+.image-simple img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd; /* Đường kẻ nhẹ ngăn cách ảnh */
 }
 
-.job-title-overlay h2 {
-    font-size: 2.5rem;
-}
-
-.job-content {
-    padding: 40px;
-}
-
-.info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-.info-item h3 {
-    color: #e67e22; /* Màu nhấn cho Hàng không */
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
+h3 {
+    font-size: 1.4rem;
+    color: #222;
+    margin-top: 30px;
     margin-bottom: 15px;
-    font-size: 1.3rem;
-}
-
-.blue-theme .job-title-overlay {
-    background: linear-gradient(transparent, rgba(44, 62, 80, 0.9));
-}
-
-.blue-theme + .job-content .info-item h3 {
-    color: #3498db; /* Màu nhấn cho Điện */
+    border-left: 4px solid #333; /* Điểm nhấn nhỏ bên trái */
+    padding-left: 15px;
 }
 
 ul {
-    list-style-type: none;
+    list-style-position: inside;
+    margin-bottom: 20px;
 }
 
 ul li {
-    margin-bottom: 12px;
-    padding-left: 25px;
-    position: relative;
+    margin-bottom: 10px;
+    list-style-type: square;
 }
 
-ul li::before {
-    content: "▹";
-    position: absolute;
-    left: 0;
-    color: inherit;
-    font-weight: bold;
+.section-divider {
+    height: 1px;
+    background: #eaeaea;
+    margin: 80px 0;
 }
 
-footer {
-    text-align: center;
-    padding: 40px;
-    color: #7f8c8d;
-}
-
-/* Di động */
-@media (max-width: 768px) {
-    .info-grid {
-        grid-template-columns: 1fr;
-    }
-    .job-hero {
-        height: 250px;
+/* Tương thích điện thoại */
+@media (max-width: 600px) {
+    .main-title {
+        font-size: 1.8rem;
     }
 }
