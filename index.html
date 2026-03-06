@@ -1,10 +1,31 @@
-<html>
+<!DOCTYPE html>
+<html lang="vi">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Của Tôi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <iframe src="list.html" width="30%" height="600"></iframe>
+    <div class="container">
+        <header class="header">
+            <img src="images/nq.png" alt="Banner giới thiệu">
+        </header>
 
-    <iframe name="noidung" width="68%" height="600"></iframe>
+        <nav class="menu">
+            <a href="content/introduce_myself.html" target="noidung">Giới Thiệu</a>
+            <a href="content/TKB.html" target="noidung">Thời Khóa Biểu</a>
+            <a href="content/tinhoc12.html" target="noidung">Tin Học 12</a>
+            <a href="content/ngoquyen.html" target="noidung">Nghề Nghiệp</a>
+        </nav>
+
+        <main class="content">
+            <iframe name="noidung" src="content/introduce_myself.html"></iframe>
+        </main>
+
+        <footer class="footer">
+            <p>© 2024 - Thiết kế bởi Nitokimelody</p>
+        </footer>
+    </div>
 </body>
 </html>
