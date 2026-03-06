@@ -1,118 +1,82 @@
-
+/* Reset lề và khoảng cách mặc định */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    background-color: #ffffff;
-    color: #333;
-    line-height: 1.6;
-    padding: 40px 0;
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
 }
 
 .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.main-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.main-header h1 {
-    font-size: 2.2rem;
-    color: #2c3e50;
-    letter-spacing: 1px;
-}
-
-.line {
-    height: 4px;
-    width: 70px;
-    background: #3498db;
-    margin: 10px auto;
-}
-
-.job-item {
-    margin-bottom: 40px;
-}
-
-.job-name {
-    color: #2980b9;
-    font-size: 1.8rem;
-    margin-bottom: 5px;
-}
-
-.person-name {
-    color: #7f8c8d;
-    font-weight: bold;
-    margin-bottom: 25px;
-    font-style: italic;
-}
-
-.job-body {
     display: flex;
-    gap: 30px;
-    align-items: flex-start;
-}
-
-.job-image {
-    flex: 1;
-}
-
-.job-image img {
+    flex-direction: column;
+    height: 100vh; /* Full chiều cao màn hình */
     width: 100%;
-    display: block;
-    border: 1px solid #ddd;
-    border-radius: 4px;
 }
 
-.job-info {
-    flex: 1.5;
+/* Header: Banner tự co giãn */
+.header {
+    flex: 0 0 15%; /* Cố định 15% chiều cao */
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.info-group {
-    margin-bottom: 25px;
+.header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ảnh sẽ lấp đầy khung mà không bị méo */
 }
 
-.info-group h3 {
-    font-size: 1.1rem;
-    color: #e67e22;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
+/* Menu điều hướng */
+.menu {
+    flex: 0 0 50px; /* Chiều cao cố định cho menu */
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
 }
 
-ul {
-    list-style: none;
-}
-
-ul li {
-    margin-bottom: 8px;
-    padding-left: 20px;
-    position: relative;
-}
-
-ul li::before {
-    content: "•";
-    color: #3498db;
-    position: absolute;
-    left: 0;
+.menu a {
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
     font-weight: bold;
+    transition: 0.3s; /* Hiệu ứng mượt khi đổi màu */
 }
 
-.separator {
-    height: 1px;
-    background: #eee;
-    margin: 50px 0;
+/* Hiệu ứng khi di chuột vào menu */
+.menu a:hover {
+    background-color: #555;
+    color: #ff4d4d;
 }
 
-@media (max-width: 768px) {
-    .job-body {
-        flex-direction: column;
-    }
+/* Phần nội dung chính */
+.content {
+    flex: 1; /* Tự động lấy hết phần diện tích còn lại */
+    background-color: white;
+}
+
+.content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Footer */
+.footer {
+    flex: 0 0 5%;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
 }
