@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký hội thao</title>
+</head>
+<body>
 
+    <h2>Đăng ký tham gia Hội thao Nhà trường</h2>
+
+    <form action="thanh-cong.html" method="get">
+        
+        <h3>1. Thông tin học sinh</h3>
+        Họ và tên: <input type="text" name="txtHoTen" required><br><br>
+        Lớp: <input type="text" name="txtLop" required><br>
+
+        <hr>
+
+        <h3>2. Chọn môn thể thao đăng ký</h3>
+        <strong>Danh sách các môn thi đấu:</strong> (Có thể chọn nhiều môn)<br>
+        <input type="checkbox" name="sport" value="BongDa"> Bóng đá <br>
+        <input type="checkbox" name="sport" value="CauLong"> Cầu lông <br>
+        <input type="checkbox" name="sport" value="BongChuyen"> Bóng chuyền <br>
+        <input type="checkbox" name="sport" value="ChayDienKinh"> Chạy điền kinh <br>
+        <input type="checkbox" name="sport" value="CoVua"> Cờ vua <br>
+        <br>
+
+        <input type="submit" name="cmd" value="Đăng ký ngay">
+    </form>
+
+</body>
+</html>
